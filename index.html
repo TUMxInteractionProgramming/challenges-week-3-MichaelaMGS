@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <title>chatter|app</title>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!-- #4 embed the #roboto #font. This needs to go above your css -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
 
     <!-- #4 #sweat out the styles by creating an #external css -->
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js"></script>
 
     
 </head>
@@ -23,7 +25,7 @@
 
     <!-- #3 #channels #list is much better, than headlines or paragraphs... -->
     <ul>
-        <li>#Yummy
+        <li onclick="switchChannel('#Yummy');">#Yummy
             <!-- #3 #channels #favorite this is not starred -->
             <span class="channel-meta">
                 <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
@@ -32,7 +34,7 @@
         </li>
 
         <!-- #4 #channel is #highlighted -->
-        <li class="selected">
+        <li onclick="switchChannel('#SevenContinents');" class="selected">
             #SevenContinents
             <!-- #3 #channels #favorite this is starred -->
             <span class="channel-meta">
@@ -40,21 +42,21 @@
             <img src="http://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="chevron-right">
         </span>
         </li>
-        <li>#KillerApp
+        <li onclick="switchChannel('#KillerApp')">#KillerApp
             <!-- #3 #channels #favorite this is not starred -->
             <span class="channel-meta">
                     <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
             <img src="http://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="chevron-right">
         </span>
         </li>
-        <li>#FirstPersonOnMars
+        <li onclick="switchChannel('#FirstPersonOnMars')">#FirstPersonOnMars
             <!-- #3 #channels #favorite this is starred -->
             <span class="channel-meta">
                  <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
             <img src="http://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="chevron-right">
         </span>
         </li>
-        <li>#Octoberfest
+        <li onclick="switchChannel('#Octoberfest')">#Octoberfest
             <!-- #3 #channels #favorite this is not starred -->
             <span class="channel-meta">    
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
@@ -89,10 +91,15 @@
 <!-- #4 #one #page -->
 <div id="chat">
     <h1>
-        #SevenContinents
-        <small>by
-            <strong>cheeses.yard.applies</strong>
+        <span id="rightName">#SevenContinents</span>
+            <small>by
+            <strong id="location">cheeses.yard.applies</strong>
+
+            <img class="imgh1" src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
+            <img class="imgh1" src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="unstarred" style="display: none;">
+
         </small>
+        
     </h1>
 
     <!-- #3 #chat #container -->

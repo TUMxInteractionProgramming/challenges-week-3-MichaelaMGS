@@ -40,6 +40,20 @@ h1 {
    position: relative;
 }
 
+h1 #location a:link{
+color: white;
+text-decoration: none;
+}
+
+#chat img{
+    position: relative;
+    line-height:56px;
+    text-align: right;
+    margin:auto;
+    padding-right:16px;
+    vertical-align: middle;
+}
+
 h1.appbar-left {
     padding-left: 72px;
 }
@@ -50,6 +64,7 @@ h1 img{
     bottom: 0px;
     left: 16px;
 }
+
 
 /* CHANNELS LIST */
 
