@@ -12,8 +12,10 @@ function toggleImg() {
     $('.imgh1').toggle();  
   }
 
-function selectTab(){
-
+function selectTab(tabId){
+    
+    $('li').removeClass('selected');
+    $('#'+tabId).addClass('selected');
 }
 
 function toggleSmile() {
