@@ -244,3 +244,6 @@ li.selected {
     margin-left: 17.5%;
 }
 
+#emojis{
+    display: none;
+}

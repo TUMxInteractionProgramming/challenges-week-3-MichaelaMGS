@@ -12,3 +12,10 @@ function toggleImg() {
     $('.imgh1').toggle();  
   }
 
+function selectTab(){
+
+}
+
+function toggleSmile() {
+    $('#emojis').toggle();  
+  }
